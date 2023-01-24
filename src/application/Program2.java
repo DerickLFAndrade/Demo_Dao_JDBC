@@ -12,47 +12,34 @@ public class Program2 {
 		Scanner sc = new Scanner(System.in);
 
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
-		//System.out.println("=== Teste 1: seller findById ====");
-		//Seller seller = sellerDao.findById(3);
-		//System.out.println(seller);
-		
-		//System.out.println("\n=== Teste 2: seller findByDepartment ====");
-		//Department department = new Department(2, null);
-		//List<Seller> list = sellerDao.findByDepartment(department);
-		
-	//	for (Seller sl : list) {
-	//.out.println(sl);
-		//}
-		
-		//System.out.println("\n=== Teste 3: seller findAll ====");
-		// list = sellerDao.findAll();
-		//for (Seller sl : list) {
-	//	System.out.println(sl);
-		//}
+		System.out.println("=== Teste 1: department findById ====");
+		Department department = departmentDao.findById(3);
+		System.out.println(department);
 		
 		
-		System.out.println("\n=== Teste 4: Department insert ====");
+		
+		/*System.out.println("\n=== Teste 4: Department insert ====");
 		Department newDepartment = new Department(null, "Officer");
 		departmentDao.insert(newDepartment);
 		
-		System.out.println("Inserted! New Id = " + newDepartment.getId());
+		System.out.println("Inserted! New Id = " + newDepartment.getId());*/
 		
 		
-	/*	System.out.println("\n=== Teste 5: seller update ====");
-		seller = sellerDao.findById(1);
-		seller.setName("Martha Waine");
-		sellerDao.update(seller);
+	System.out.println("\n=== Teste 5: department update ====");
+		department = departmentDao.findById(3);
+		department.setName("Computers");
+		departmentDao.update(department);
 		
 		System.out.println("update completed!");
 		
 		
-		System.out.println("\n=== Teste 5: seller update ====");
+		System.out.println("\n=== Teste 5: department delete ====");
 		
 		System.out.println("Enter id for delete test: ");
 		int id = sc.nextInt();
-		sellerDao.deleteById(id);
+		departmentDao.deleteById(id);
 		
-		System.out.println("seller deleted!");*/
+		System.out.println("department deleted!");
 		
 		sc.close();
 	}
